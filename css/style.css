@@ -1,0 +1,97 @@
+
+
+
+:root {
+	--primary-color: orange;
+	--primary: var(--primary-color);
+}
+
+
+body {
+	overflow: auto;
+}
+
+
+
+.full-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+
+
+.primary-bg {
+	background: var(--primary-color);
+}
+
+
+.diagonal-triangle {
+	display: inline-block;
+	width: var(--diagonal-length);
+	height: var(--diagonal-length);
+	transform: var(--rotate-transform);
+	/*transform: rotate(0deg);*/
+	position: fixed;
+	left: var(--triangle-left);
+	top: var(--triangle-top);
+}
+
+
+div.coming-soon {
+	height: var(--coming-soon-height);
+	top: calc((var(--window-height) - var(--coming-soon-height)) / 2 );
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+
+div.coming-soon > span {
+	display: inline-block;
+	width: 49%;
+	font-family: Arial;
+	font-size: 40px;
+	margin: 0;
+	font-family: 'Palette Mosaic', cursive;
+}
+
+div.coming-soon > span:first-child {
+	text-align: right;
+	color:  white;
+	transform: translate(30px, -60px);
+	/*background: green;*/
+}
+
+div.coming-soon > span:last-child {
+	color: var(--primary);
+	transform: translate(-30px, 60px);
+	/*background: blue;*/
+	opacity: 0.1;
+}
+
+
+
+.watch {
+	position: fixed;
+	width: 30px;
+	bottom: 20px;
+	right: 20px;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
